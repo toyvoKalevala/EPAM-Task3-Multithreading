@@ -1,0 +1,24 @@
+{
+  "trucks": [
+    {
+      "id": 1,
+      "loading": true
+    },
+    {
+      "id": 2,
+      "loading": false
+    },
+    {
+      "id": 3,
+      "loading": true
+    },
+    {
+      "id": 4,
+      "loading": false
+    },
+    {
+      "id": 5,
+      "loading": true
+    }
+  ]
+}
