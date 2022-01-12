@@ -14,7 +14,7 @@ public class Main {
 
         ExecutorService service = Executors.newCachedThreadPool();
         for (Truck truck : trucks.getTracks()) {
-            service.submit(truck);
+            service.execute(truck);
         }
         service.shutdown();
     }

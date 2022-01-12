@@ -26,23 +26,18 @@ public class Base {
 
     public void process(Truck truck) {
         try {
-            System.out.println("Truck " + truck.getId() + " is came");
             semaphore.acquire();
             lock.lock();
-            System.out.println("Truck " + truck.getId() + " is processing");
             if (truck.getLoading()) {
                 truck.setLoading(false);
-                System.out.println("truck " + truck.getId() + " loading " + truck.getLoading());
             } else {
                 truck.setLoading(true);
-                System.out.println("truck " + truck.getId() + " loading " + truck.getLoading());
             }
         } catch (InterruptedException e) {
             System.out.println("Error: " + e.getMessage());
         } finally {
             semaphore.release();
             lock.unlock();
-            System.out.println("Truck " + truck.getId() + " is out");
         }
     }
 }
